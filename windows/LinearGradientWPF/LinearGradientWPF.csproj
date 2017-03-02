@@ -53,13 +53,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\..\node_modules\react-native-windows\ReactWindows\ReactNative.Net46\ReactNative.Net46.csproj">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)\..\node_modules\%40bluejeans\react-native-windows\ReactWindows\ReactNative.Net46\ReactNative.Net46.csproj">
       <Project>{22cbff9c-fe36-43e8-a246-266c7635e662}</Project>
       <Name>ReactNative.Net46</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
