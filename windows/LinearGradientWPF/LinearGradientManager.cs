@@ -9,7 +9,7 @@ using ReactNative.UIManager.Annotations;
 
 namespace LinearGradient
 {
-    class LinearGradientManager : ViewParentManager<Canvas>
+    class LinearGradientManager : BorderedViewParentManager<Canvas>
     {
         public const String REACT_CLASS = "BVLinearGradient";
         public const String PROP_COLORS = "colors";
@@ -26,17 +26,6 @@ namespace LinearGradient
             {
                 return REACT_CLASS;
             }
-        }
-
-        protected override Canvas CreateViewInstance(ThemedReactContext reactContext)
-        {
-            _canvas = new Canvas();
-            _linearGradient = new LinearGradientBrush
-            {
-                SpreadMethod = GradientSpreadMethod.Pad
-            };
-            _canvas.Background = _linearGradient;
-            return _canvas;
         }
 
         [ReactProp(PROP_COLORS)]
@@ -82,29 +71,40 @@ namespace LinearGradient
             _linearGradient.EndPoint = new Point(endPos.Value<float>("x"), endPos.Value<float>("y"));
         }
 
-        public override void AddView(Canvas parent, DependencyObject child, int index)
+        protected override void AddView(Canvas parent, DependencyObject child, int index)
         {
             parent.Children.Insert(index, (UIElement)child);
         }
 
-        public override int GetChildCount(Canvas parent)
+        protected override int GetChildCount(Canvas parent)
         {
             return parent.Children.Count;
         }
 
-        public override DependencyObject GetChildAt(Canvas parent, int index)
+        protected override FrameworkElement GetChildAt(Canvas parent, int index)
         {
             return (FrameworkElement)parent.Children[index];
         }
 
-        public override void RemoveChildAt(Canvas parent, int index)
+        protected override void RemoveChildAt(Canvas parent, int index)
         {
             parent.Children.RemoveAt(index);
         }
 
-        public override void RemoveAllChildren(Canvas parent)
+        protected override void RemoveAllChildren(Canvas parent)
         {
             parent.Children.Clear();
+        }
+
+        protected override Canvas CreateInnerElement(ThemedReactContext reactContext)
+        {
+            _canvas = new Canvas();
+            _linearGradient = new LinearGradientBrush
+            {
+                SpreadMethod = GradientSpreadMethod.Pad
+            };
+            _canvas.Background = _linearGradient;
+            return _canvas;
         }
     }
 }
