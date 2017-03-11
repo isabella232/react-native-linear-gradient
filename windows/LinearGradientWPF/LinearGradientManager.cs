@@ -29,7 +29,7 @@ namespace LinearGradient
         }
 
         [ReactProp(PROP_COLORS)]
-        public void setColors(Canvas linearGradient, List<string> colors)
+        public void setColors(Border linearGradient, List<string> colors)
         {
             GradientStopCollection stops = _linearGradient.GradientStops;
             for (int i = 0; i < colors.Count; i++)
@@ -43,7 +43,7 @@ namespace LinearGradient
         }
 
         [ReactProp(PROP_LOCATIONS)]
-        public void setLocations(Canvas linearGradient, List<float> locations)
+        public void setLocations(Border linearGradient, List<float> locations)
         {
             if (locations != null)
             {
@@ -60,13 +60,13 @@ namespace LinearGradient
         }
 
         [ReactProp(PROP_START_POS)]
-        public void setStartPosition(Canvas linearGradient, JObject startPos)
+        public void setStartPosition(Border linearGradient, JObject startPos)
         {
             _linearGradient.StartPoint = new Point(startPos.Value<float>("x"), startPos.Value<float>("y"));
         }
 
         [ReactProp(PROP_END_POS)]
-        public void setEndPosition(Canvas linearGradient, JObject endPos)
+        public void setEndPosition(Border linearGradient, JObject endPos)
         {
             _linearGradient.EndPoint = new Point(endPos.Value<float>("x"), endPos.Value<float>("y"));
         }
