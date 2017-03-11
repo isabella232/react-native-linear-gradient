@@ -9,7 +9,7 @@ using ReactNative.UIManager.Annotations;
 
 namespace LinearGradient
 {
-    class LinearGradientManager : BorderedViewParentManager<Canvas>
+    class LinearGradientManager : BorderedCanvasManager<Canvas>
     {
         public const String REACT_CLASS = "BVLinearGradient";
         public const String PROP_COLORS = "colors";
@@ -70,32 +70,7 @@ namespace LinearGradient
         {
             _linearGradient.EndPoint = new Point(endPos.Value<float>("x"), endPos.Value<float>("y"));
         }
-
-        protected override void AddView(Canvas parent, DependencyObject child, int index)
-        {
-            parent.Children.Insert(index, (UIElement)child);
-        }
-
-        protected override int GetChildCount(Canvas parent)
-        {
-            return parent.Children.Count;
-        }
-
-        protected override FrameworkElement GetChildAt(Canvas parent, int index)
-        {
-            return (FrameworkElement)parent.Children[index];
-        }
-
-        protected override void RemoveChildAt(Canvas parent, int index)
-        {
-            parent.Children.RemoveAt(index);
-        }
-
-        protected override void RemoveAllChildren(Canvas parent)
-        {
-            parent.Children.Clear();
-        }
-
+        
         protected override Canvas CreateInnerElement(ThemedReactContext reactContext)
         {
             _canvas = new Canvas();
