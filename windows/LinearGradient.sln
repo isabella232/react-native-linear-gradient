@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearGradientWPF", "LinearGradientWPF\LinearGradientWPF.csproj", "{B9E0C231-1148-4EA2-B4CD-65DADB760474}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactNative.Net46", "..\node_modules\@bluejeans\react-native-windows\ReactWindows\ReactNative.Net46\ReactNative.Net46.csproj", "{22CBFF9C-FE36-43E8-A246-266C7635E662}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChakraBridge", "..\node_modules\@bluejeans\react-native-windows\ReactWindows\ChakraBridge\ChakraBridge.vcxproj", "{4B72C796-16D5-4E3A-81C0-3E36F531E578}"
@@ -15,6 +13,10 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LinearGradient.Shared", "Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearGradient", "LinearGradient\LinearGradient.csproj", "{BE471D3D-8DF5-4BDB-B020-2C44667443FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearGradient.WPF", "LinearGradient.WPF\LinearGradient.WPF.csproj", "{B9E0C231-1148-4EA2-B4CD-65DADB760474}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ReactNative.Shared", "..\node_modules\@bluejeans\react-native-windows\ReactWindows\ReactNative.Shared\ReactNative.Shared.shproj", "{EEA8B852-4D07-48E1-8294-A21AB5909FE5}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		LinearGradient.Shared\LinearGradient.Shared.projitems*{1336dbfa-5503-4e97-82ef-f0508b9318ab}*SharedItemsImports = 13
@@ -22,6 +24,7 @@ Global
 		LinearGradient.Shared\LinearGradient.Shared.projitems*{b9e0c231-1148-4ea2-b4cd-65dadb760474}*SharedItemsImports = 4
 		LinearGradient.Shared\LinearGradient.Shared.projitems*{be471d3d-8df5-4bdb-b020-2c44667443ff}*SharedItemsImports = 4
 		..\node_modules\@bluejeans\react-native-windows\ReactWindows\ReactNative.Shared\ReactNative.Shared.projitems*{c7673ad5-e3aa-468c-a5fd-fa38154e205c}*SharedItemsImports = 4
+		..\node_modules\@bluejeans\react-native-windows\ReactWindows\ReactNative.Shared\ReactNative.Shared.projitems*{eea8b852-4d07-48e1-8294-a21ab5909fe5}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -32,16 +35,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|ARM.ActiveCfg = Debug|x86
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x64.ActiveCfg = Debug|x64
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x64.Build.0 = Debug|x64
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x86.ActiveCfg = Debug|x86
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x86.Build.0 = Debug|x86
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|ARM.ActiveCfg = Release|x86
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x64.ActiveCfg = Release|x64
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x64.Build.0 = Release|x64
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x86.ActiveCfg = Release|x86
-		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x86.Build.0 = Release|x86
 		{22CBFF9C-FE36-43E8-A246-266C7635E662}.Debug|ARM.ActiveCfg = Debug|ARM
 		{22CBFF9C-FE36-43E8-A246-266C7635E662}.Debug|ARM.Build.0 = Debug|ARM
 		{22CBFF9C-FE36-43E8-A246-266C7635E662}.Debug|x64.ActiveCfg = Debug|x64
@@ -90,6 +83,16 @@ Global
 		{BE471D3D-8DF5-4BDB-B020-2C44667443FF}.Release|x64.Build.0 = Release|x64
 		{BE471D3D-8DF5-4BDB-B020-2C44667443FF}.Release|x86.ActiveCfg = Release|x86
 		{BE471D3D-8DF5-4BDB-B020-2C44667443FF}.Release|x86.Build.0 = Release|x86
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|ARM.ActiveCfg = Debug|x86
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x64.ActiveCfg = Debug|x64
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x64.Build.0 = Debug|x64
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x86.ActiveCfg = Debug|x86
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Debug|x86.Build.0 = Debug|x86
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|ARM.ActiveCfg = Release|x86
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x64.ActiveCfg = Release|x64
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x64.Build.0 = Release|x64
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x86.ActiveCfg = Release|x86
+		{B9E0C231-1148-4EA2-B4CD-65DADB760474}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
