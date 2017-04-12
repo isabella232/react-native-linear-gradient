@@ -3,21 +3,8 @@
   "version": "2.0.1",
   "description": "A <LinearGradient> element for react-native",
   "main": "index",
-  "author": {
-    "name": "Brent Vatne",
-    "email": "brentvatne@gmail.com",
-    "url": "https://github.com/bluejeans/react-native-linear-gradient"
-  },
+  "author": "BlueJeans Network, Inc.",
   "license": "MIT",
-  "contributors": [{
-    "name": "Nick Hudkins",
-    "email": "nick@nickhudkins.com",
-    "url": "https://github.com/nickhudkins"
-  }, {
-    "name": "Dmitry Gladkov",
-    "email": "dmitry.gladkov@gmail.com",
-    "url": "https://github.com/dgladkov"
-  }],
   "repository": {
     "type": "git",
     "url": "git@github.com:bluejeans/react-native-linear-gradient.git"
