@@ -4,7 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { processColor, requireNativeComponent, PointPropType, View } from 'react-native';
-const depricatedPropType = require('react-native/Libraries/Utilities/depricatedPropType.js')
+const deprecatedPropType = require('react-native/Libraries/Utilities/deprecatedPropType.js')
 
 const convertPoint = (name, point) => {
   if (Array.isArray(point)) {
@@ -32,14 +32,14 @@ export default class LinearGradient extends Component {
   static propTypes = {
     start: PropTypes.oneOfType([
       PointPropType,
-      depricatedPropType(
+      deprecatedPropType(
         PropTypes.arrayOf(PropTypes.number),
         'Use point object with {x, y} instead.'
       )
     ]),
     end: PropTypes.oneOfType([
       PointPropType,
-      depricatedPropType(
+      deprecatedPropType(
         PropTypes.arrayOf(PropTypes.number),
         'Use point object with {x, y} instead.'
       )
