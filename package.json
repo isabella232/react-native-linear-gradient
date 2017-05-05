@@ -1,6 +1,6 @@
 {
   "name": "@bluejeans/react-native-linear-gradient",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "A <LinearGradient> element for react-native",
   "main": "index",
   "author": "BlueJeans Network, Inc.",
@@ -12,8 +12,8 @@
   "scripts": {
     "flow": "flow"
   },
-  "peerDependencies": {
-    "@bluejeans/react-native-windows": "0.42.1-rc.3",
+  "dependencies": {
+    "@bluejeans/react-native-windows": "0.42.1-rc.4",
     "react-native": "^0.42.0"
   },
   "devDependencies": {
