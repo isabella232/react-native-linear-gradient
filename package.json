@@ -1,6 +1,6 @@
 {
   "name": "@bluejeans/react-native-linear-gradient",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "A <LinearGradient> element for react-native",
   "main": "index",
   "author": "BlueJeans Network, Inc.",
@@ -13,10 +13,10 @@
     "flow": "flow"
   },
   "dependencies": {
-    "@bluejeans/react-native-windows": "0.42.1-rc.15",
     "react-native": "^0.42.0"
   },
   "devDependencies": {
+    "@bluejeans/react-native-windows": "0.42.1-rc.16",
     "flow-bin": "^0.40.0",
     "jest-cli": "0.2.1"
   }
